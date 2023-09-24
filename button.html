@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Поле поиска</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #6ee1f0;
+    }
+
+    .nav-bar {
+      background: #f3f7fa92;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 260px; /* Змініть ширину ленти навігації за потребою */
+      padding: 10px;
+      position: fixed;
+      height: 100%;
+      right: 0; /* Змініть для розташування справа */
+      top: 0;
+    }
+
+    .nav-btn {
+      margin-bottom: 10px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .content {
+      margin-right: 220px; /* Змініть відступ контенту, щоб врахувати ширину ленти навігації */
+    }
+
+    .search-box {
+      position: absolute;
+      top: 20px; /* Змініть відступ від верхньої частини сторінки */
+      left: 50%;
+      transform: translateX(-50%);
+      background: #75c8f5;
+      height: 40px;
+      border-radius: 40px;
+      padding: 10px;
+    }
+
+    .search-box:hover > .search-txt {
+      width: 240px;
+      padding: 0 6px;
+    }
+
+    .search-box:hover > .search-btn {
+      background: white;
+      color: black;
+    }
+
+    .search-btn {
+      color: #eeeeee;
+      float: right;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #659ae4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 0.4s;
+      color: white;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .search-btn > i {
+      font-size: 20px;
+    }
+
+    .search-txt {
+      border: none;
+      background: none;
+      outline: none;
+      float: left;
+      padding: 0;
+      color: white;
+      font-size: 16px;
+      transition: 0.4s;
+      line-height: 40px;
+      width: 0px;
+      font-weight: bold;
+    }
+
+  
+
+    .outlined-text {
+      color: #fff;
+      text-shadow: -1px -1px 0 rgb(13, 94, 233), 1px -1px 0 #146ebd, -1px 1px 0 #2477fd, 1px 1px 0 #0074f0;
+      margin-left: 320px;
+      font-size: 50px;
+      font-family: Bookman;
+      color: #ffffff;
+      font-weight: bold;
+    }
+
+    .logo {
+      width: 180px;
+      height: 180px;
+      vertical-align: middle;
+    }
+
+    .my-button {
+      font-size: 20px;
+      font-family: Courier New, sans-serif;
+      color: rgb(0, 0, 0);
+      padding: 30px 105px;
+      margin-top: 20px;
+      margin-right: 1px; /* Змініть відступ кнопок від правого краю ленти навігації */
+      background-color: #5ab9f8ae;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      font-weight: bold;
+    }
+
+    .my-button1 {
+      font-size: 20px;
+      font-family: Courier New, sans-serif;
+      padding: 30px 90px;
+      margin-top: 20px; /* Змініть відступ між кнопками */
+      margin-right: 5px; /* Змініть відступ кнопок від правого краю ленти навігації */
+      background-color: #5bbafaab;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      font-weight: bold;
+    }
+
+    .my-button2 {
+      font-size: 20px;
+      font-family: Courier New, sans-serif;
+      padding: 30px 25px;
+      margin-top: 20px; /* Змініть відступ між кнопками */
+      margin-right: 1px; /* Змініть відступ кнопок від правого краю ленти навігації */
+      background-color: #65c0fcb5;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      font-weight: bold;
+    }
+
+    .my-button3 {
+      font-size: 20px;
+      font-family: Courier New, sans-serif;
+      padding: 30px 80px;
+      margin-top: 120px; /* Змініть відступ між кнопками */
+      margin-right: 0px; /* Змініть відступ кнопок від правого краю ленти навігації */
+      font-weight: bold;
+      background-color: #47b1f7b0;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    body {
+      background-image: url('NEMO0.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .header {
+      margin-left: 0px;
+      margin-top: 0px;
+      display: flex;
+      align-items: center;
+    }
+  </style>
+</head>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body background="NEMO0.png">
+  <div class="nav-bar">
+    <a href="button3.html" class="my-button3">Реєстрація</a>
+    <div class="search-box">
+      <input type="text" name="" class="search-txt" placeholder="Type to search" />
+      <a class="search-btn" href="#">
+        <i class="fa fa-search" aria-hidden="true"></i>
+      </a>
+    </div>
+    <a href="button4.html" class="my-button">Номера<br>і ціни</a>
+    <a href="button2.html" class="my-button1">Контакти</a>
+    <a href="button5.html" class="my-button2">MASSAGE&COSMETOLOGY</a>
+  </div>
+  <div class="content">
+    <div class="header">
+      <img src="дил.png" class="logo">
+      <h1 class="outlined-text" class="title">Готельний комплекс «Немо»</h1>
+    </div>
+  </div>
+</body>
+
+</html>

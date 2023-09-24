@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+   body {
+      background-image: url("https://odessa.nemohotels.com/wp-content/uploads/2018/11/cat-wellnes-DSC_3311-2.jpg");
+      background-size: 100% 380px;
+      background-position: top;
+      background-repeat: no-repeat;
+      height: 100vh;
+      position: relative;
+    }
+
+    .top-text {
+      position: absolute;
+      font-family: Cursive, sans-serif;
+      color: #1a044e;
+      top: 280px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      background-color: rgba(215, 239, 249, 0.806);
+      padding: 20px;
+      font-size: 36px;
+      border: 1px solid #4643e9;
+    }
+
+    .bottom-text {
+      top: 360px;
+      position: absolute;
+      font-family: Cursive, sans-serif;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      text-align: left;
+      padding: 40px;
+      font-size: 20px;
+    }
+
+    .my-button {
+      width: 80px;
+      height: 50px;
+      background-color: #57b5f8d9;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    /* Стилі для кнопки прокрутки вгору */
+    #myScrollBtn {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 150;
+  border: none;
+  outline: none;
+  background-color: #2e9eeec3;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 20px;
+  font-size: 24px; /* Збільште розмір шрифту */
+  font-weight: bold; /* Зробіть текст жирним */
+}
+
+#myScrollBtn:hover {
+  background-color: #3578bf;
+}
+ 
+
+  </style>
+</head>
+<body>
+  
+  <a href="button.html" ><button class="my-button">На головну</button></a>
+
+  <div class="top-text">
+    ЦЕНТР МАСАЖУ І КОСМЕТОЛОГІЇ
+  </div>
+  
+  
+  <div class="bottom-text">
+    Перейняться атмосферою унікальних SPA-церемоній, ексклюзивних оздоровчих процедур у виконанні професійних майстрів. Ваше тіло порине в гармонію з душею, приносячи насолоду та повне розслаблення під час відпочинку в нашому готелі.
+    <p style="font-size: 35px;">SPA-церемонії в Одесі</p>
+    <p style="font-size: 23px; padding-left: 0;">Центр масажу та косметології пропонує найширший вибір SPA-процедур та підходів до оздоровлення вашого тіла. Відкрийте для себе чарівну дію SPA-капсули, відвідайте масажні кабінети з досвідченими майстрами масажу, індивідуальний хаммам або римську парну. Також пропонуємо відвідати бальнеологічну ванну з гідромасажем, душ Шарко, солярій, фітобочку та багато іншого у списку послуг Центру масажу та косметології.</p>
+    <p style="font-size: 20px; font-weight: bold;">
+      Центр массажа и косметологи: 
+      <span style="color: rgb(28, 57, 151);">+38 (048) 705-70-89</span>, 
+      <span style="color: rgb(37, 37, 163);">+38 (050) 399-43-94</span>
+    </p>
+    <img src="data:image/png;base64,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" style="display: block; margin-top: 20px; margin-left: auto; margin-right: auto;">
+    </div>
+  
+  
+    <button onclick="topFunction()" id="myScrollBtn" title="Прокрутити вгору">↑</button>
+
+</body>
+<script>
+  // Функція, яка визначає, коли відобразити кнопку
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      document.getElementById("myScrollBtn").style.display = "block";
+    } else {
+      document.getElementById("myScrollBtn").style.display = "none";
+    }
+  }
+
+  // Функція, яка прокручує сторінку вгору при натисканні кнопки
+  function topFunction() {
+    document.body.scrollTop = 0; // Для Safari
+    document.documentElement.scrollTop = 0; // Для Chrome, Firefox, IE та Opera
+  }
+
+  // Додавання обробника події прокрутки
+  window.onscroll = function () {
+    scrollFunction();
+  };
+</script>
+</html>
